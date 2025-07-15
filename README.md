@@ -5,15 +5,12 @@
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Ngo%20Huu%20Loc&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=white" />
 
-  <!-- You can use a custom animated GIF or SVG here for more effects -->
-  <img src="https://raw.githubusercontent.com/ngou1200/animated-assets/main/particles.gif" width="100%" alt="animated particles" />
-
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=4000&pause=1000&color=2196F3&center=true&vCenter=true&width=500&lines=Hi+there!+I'm+Nick+%F0%9F%91%8B;Full-Stack+Developer;Creative+Designer;Problem+Solver" />
 
   <br>
 
-  [![Profile Views](https://komarev.com/ghpvc/?username=ngou1200&color=blueviolet&style=for-the-badge)](https://github.com/ngou1200)
-  [![GitHub followers](https://img.shields.io/github/followers/ngou1200?style=for-the-badge&logo=github)](https://github.com/ngou1200)
+  [![Profile Views](https://komarev.com/ghpvc/?username=ngou1200&color=blueviolet&style=for-the-badge)](https://github.com/NgoHuuLoc0612)
+  [![GitHub followers](https://img.shields.io/github/followers/ngou1200?style=for-the-badge&logo=github)](https://github.com/NgoHuuLoc0612)
   [![Twitter Follow](https://img.shields.io/twitter/follow/ngou1200?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/benhan871986)
 
 </div>
@@ -92,16 +89,16 @@ UI/UX Design          ███████████████████�
 ### 📈 GitHub Statistics
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=ngou1200&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=ngou1200&theme=tokyonight&hide_border=true" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=NgoHuuLoc0612&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=NgoHuuLoc0612&theme=tokyonight&hide_border=true" />
 </div>
 
 <div align="center">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ngou1200&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" />
+  <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NgoHuuLoc0612&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" />
 </div>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ngou1200&theme=tokyonight&no-frame=true&row=1&column=7" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=NgoHuuLoc0612&theme=tokyonight&no-frame=true&row=1&column=7" width="100%" />
 </div>
 
 ---
@@ -151,7 +148,7 @@ mindmap
 ### 📫 Connect With Me
 
 <div align="center">
-  <a href="https://github.com/ngou1200" target="_blank">
+  <a href="https://github.com/NgoHuuLoc0612" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://twitter.com/benhan871986" target="_blank">
