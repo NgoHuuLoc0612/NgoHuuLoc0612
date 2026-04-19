@@ -1,0 +1,75 @@
+# .github/workflows/metrics.yml
+# Generates an advanced SVG metrics card with live GitHub data
+# Output: /main/metrics.svg
+
+name: ⚡ Generate GitHub Metrics
+
+on:
+  schedule:
+    - cron: "0 6 * * *"    # runs daily at 6 AM UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: ⚡ Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # ── Core settings ──────────────────────────
+          user: NgoHuuLoc0612
+          template: classic
+          base: header, activity, community, repositories, metadata
+          filename: metrics.svg
+          output_action: commit
+          committer_branch: main
+          committer_message: "chore: update metrics [skip ci]"
+
+          # ── Theme ─────────────────────────────────
+          config_timezone: Asia/Ho_Chi_Minh
+          config_order: base.header, base.activity, base.community, base.repositories
+
+          # ── Plugin: Achievements ───────────────────
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_secrets: yes
+          plugin_achievements_limit: 0
+
+          # ── Plugin: Languages ─────────────────────
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake,
+            lex, cmake, shell, gnuplot
+          plugin_languages_limit: 8
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_threshold: 0%
+
+          # ── Plugin: Habits ─────────────────────────
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+
+          # ── Plugin: Topics ─────────────────────────
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_topics_mode: icons
+
+          # ── Plugin: Stars ──────────────────────────
+          plugin_stars: yes
+          plugin_stars_limit: 4
+
+          # ── Plugin: Code snippet ───────────────────
+          plugin_code: yes
+          plugin_code_lines: 12
+          plugin_code_load: 400

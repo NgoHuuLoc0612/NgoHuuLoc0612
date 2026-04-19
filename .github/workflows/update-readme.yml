@@ -1,0 +1,34 @@
+# .github/workflows/update-readme.yml
+# Auto-refreshes the README timestamp and stats daily
+
+name: 🔄 Auto Update README
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # daily at 00:30 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ⏱️ Update last-synced timestamp
+        run: |
+          DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          sed -i "s/Auto-updated by GitHub Actions every 24h/Auto-updated: $DATE/" README.md
+
+      - name: 💾 Commit & push if changed
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: auto-update README timestamp [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
