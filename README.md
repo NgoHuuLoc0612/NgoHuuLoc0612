@@ -8,7 +8,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0221,25:0a3d62,50:1a1a2e,75:16213e,100:0f3460&height=280&section=header&text=NGO%20HUU%20LOC&fontSize=90&fontColor=00d4ff&fontAlignY=40&desc=Crafting%20the%20Future%2C%20One%20Line%20at%20a%20Time&descSize=22&descAlignY=65&descColor=a8edff&animation=fadeIn&stroke=00d4ff&strokeWidth=2" />
 
 <!-- ░░░ TYPING SVG ░░░ -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Building+extraordinary+things;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Building+extraordinary+things;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
 
 <br>
 
