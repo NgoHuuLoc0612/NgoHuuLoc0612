@@ -28,31 +28,21 @@ jobs:
         with:
           fetch-depth: 0    # full history needed for contribution graph
 
-      - name: 📝 Create settings file
-        run: |
-          cat > /tmp/settings.json << 'EOF'
-          {
-            "githubUserName": "${{ github.repository_owner }}",
-            "startWeekday": 0,
-            "themeName": "night-rainbow",
-            "backgroundColor": "#0d0221",
-            "foregroundColor": "#00d4ff",
-            "outfileList": ["profile-3d-contrib/profile-night-rainbow.svg"]
-          }
-          EOF
-
       - name: 🌐 Generate 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: /tmp/settings.json
+
+      - name: 🔧 Rename to profile-night-rainbow.svg
+        run: |
+          mv profile-3d-contrib/profile-customize.svg profile-3d-contrib/profile-night-rainbow.svg
 
       - name: 🚀 Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: profile-3d-contrib
-          keep_history: true   # giữ lại snake và các file khác trên branch output
+          keep_history: true   
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
