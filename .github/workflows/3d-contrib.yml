@@ -49,31 +49,10 @@ jobs:
           SETTING_JSON: /tmp/settings.json
 
       - name: 🚀 Push to output branch
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "github-actions[bot]"
-
-          # Use SAVE_DIR (avoid TMPDIR — reserved env variable in Linux)
-          SAVE_DIR=$(mktemp -d)
-          cp -r profile-3d-contrib/. "$SAVE_DIR/"
-
-          # Switch to (or create) the output branch
-          git fetch origin
-          git clean -fd   
-          if git ls-remote --exit-code --heads origin output; then
-            git checkout output
-          else
-            git checkout --orphan output
-            git rm -rf . --quiet
-          fi
-
-          # Restore generated files from safe temp location
-          mkdir -p profile-3d-contrib
-          cp -r "$SAVE_DIR/." profile-3d-contrib/
-
-          git add -A
-          git diff --staged --quiet || \
-            git commit -m "chore: update 3D contribution graph [skip ci]"
-          git push origin output
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: profile-3d-contrib
+          keep_history: true   # giữ lại snake và các file khác trên branch output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
