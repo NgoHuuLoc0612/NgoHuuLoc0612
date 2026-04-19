@@ -1,15 +1,14 @@
-# .github/workflows/snake.yml
-# Generates a snake animation from your contribution graph
-# Output: /output/github-snake.svg & github-snake-dark.svg
-
 name: 🐍 Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # runs every 12 hours
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   generate:
