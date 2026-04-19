@@ -1,6 +1,10 @@
 # .github/workflows/3d-contrib.yml
 # Generates a stunning 3D isometric contribution calendar
-# Output: /output/profile-3d-contrib/profile-night-rainbow.svg
+# Output: output branch → profile-3d-contrib/profile-night-rainbow.svg
+#
+# ─── SECRETS REQUIRED ────────────────────────────────────────
+#  GITHUB_TOKEN  →  provided automatically by GitHub Actions
+# ──────────────────────────────────────────────────────────────
 
 name: 🌐 Generate 3D Contribution Graph
 
@@ -15,9 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-3d-profile
+    permissions:
+      contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: 📥 Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # full history needed for contribution graph
 
       - name: 🌐 Generate 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
@@ -39,12 +48,27 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions[bot]"
+
+          # Use SAVE_DIR (avoid TMPDIR — reserved env variable in Linux)
+          SAVE_DIR=$(mktemp -d)
+          cp -r profile-3d-contrib/. "$SAVE_DIR/"
+
+          # Switch to (or create) the output branch
+          git fetch origin
+          if git ls-remote --exit-code --heads origin output; then
+            git checkout output
+          else
+            git checkout --orphan output
+            git rm -rf . --quiet
+          fi
+
+          # Restore generated files from safe temp location
+          mkdir -p profile-3d-contrib
+          cp -r "$SAVE_DIR/." profile-3d-contrib/
+
           git add -A
-          git fetch origin output
-          git checkout output
-          cp -r profile-3d-contrib .
-          git add -A
-          git commit -m "chore: update 3D contribution graph [skip ci]" || true
+          git diff --staged --quiet || \
+            git commit -m "chore: update 3D contribution graph [skip ci]"
           git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
