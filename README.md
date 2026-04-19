@@ -120,7 +120,7 @@
 
 ### 🏆 Trophy Wall
 
-<img src="https://github-profile-trophy.vercel.app/?username=NgoHuuLoc0612&theme=algolia&no-frame=true&no-bg=true&row=2&column=4&margin-w=10&margin-h=10" width="100%" alt="Trophies" />
+<img src="github-trophies.vercel.app" width="100%" alt="Trophies" />
 
 </div>
 
