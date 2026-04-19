@@ -106,7 +106,7 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
+<img src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
 
 </div>
 
