@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>nick@universe — terminal</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg0: #0d0f14;
+    --bg1: #161b24;
+    --bg2: #1a2030;
+    --border: #1e2530;
+    --border2: #2a3545;
+    --cyan: #4ec9b0;
+    --blue: #569cd6;
+    --purple: #c586c0;
+    --yellow: #e5c07b;
+    --green: #6bce9e;
+    --red: #e06c75;
+    --accent: #00d4ff;
+    --text: #c8d3e0;
+    --dim: #4a5568;
+    --white: #ffffff;
+    --dcdcaa: #dcdcaa;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg0);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #wrap {
+    width: 100%;
+    max-width: 820px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Title bar ── */
+  .titlebar {
+    background: var(--bg1);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    user-select: none;
+  }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .dot.r { background: #ff5f57; }
+  .dot.y { background: #febc2e; }
+  .dot.g { background: #28c840; }
+  .tb-title { flex: 1; text-align: center; font-size: 12px; color: var(--dim); letter-spacing: 1px; }
+
+  /* ── Output ── */
+  #out {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px 8px;
+    font-size: 13.5px;
+    line-height: 1.75;
+    scroll-behavior: smooth;
+  }
+  #out::-webkit-scrollbar { width: 5px; }
+  #out::-webkit-scrollbar-track { background: transparent; }
+  #out::-webkit-scrollbar-thumb { background: var(--bg2); border-radius: 4px; }
+
+  .line { white-space: pre-wrap; word-break: break-all; min-height: 1em; }
+
+  /* colour helpers */
+  .p  { color: var(--cyan); }
+  .pu { color: var(--blue); }
+  .pa { color: var(--purple); }
+  .pd { color: var(--dcdcaa); }
+  .cc { color: var(--cyan); }
+  .cg { color: var(--green); }
+  .cy { color: var(--yellow); }
+  .cr { color: var(--red); }
+  .ca { color: var(--accent); }
+  .cb { color: var(--blue); }
+  .cw { color: var(--white); font-weight: bold; }
+  .cd { color: var(--dim); }
+
+  /* ── Hint bar ── */
+  #hints {
+    padding: 7px 20px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: #0a0c10;
+    flex-shrink: 0;
+  }
+  .hbtn {
+    font-family: inherit;
+    font-size: 11.5px;
+    padding: 2px 9px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    color: var(--blue);
+    cursor: pointer;
+    transition: background .13s, color .13s;
+  }
+  .hbtn:hover { background: #223040; color: var(--accent); }
+
+  /* ── Input row ── */
+  .input-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px 14px;
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .ps { font-size: 13.5px; white-space: nowrap; }
+  #cmd {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: var(--text);
+    caret-color: var(--accent);
+  }
+  #cmd::placeholder { color: var(--dim); }
+
+  /* ── Matrix canvas overlay ── */
+  #matrix-canvas {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  #matrix-canvas.active { display: block; }
+  #matrix-exit {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    font-family: inherit;
+    font-size: 12px;
+    padding: 5px 18px;
+    background: rgba(0,0,0,.7);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #matrix-exit.active { display: block; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+<button id="matrix-exit">[ press any key or click to exit ]</button>
+
+<div id="wrap">
+  <div class="titlebar">
+    <div class="dot r"></div>
+    <div class="dot y"></div>
+    <div class="dot g"></div>
+    <div class="tb-title">nick@universe — zsh</div>
+  </div>
+
+  <div id="out"></div>
+
+  <div id="hints"></div>
+
+  <div class="input-row">
+    <div class="ps">
+      <span class="pu">nick</span><span class="pa">@</span><span class="cc">universe</span>&nbsp;<span class="pd">❯</span>
+    </div>
+    <input id="cmd" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="type a command…" />
+  </div>
+</div>
+
+<script>
+const out  = document.getElementById('out');
+const inp  = document.getElementById('cmd');
+const hints= document.getElementById('hints');
+const PROMPT = `<span class="pu">nick</span><span class="pa">@</span><span class="cc">universe</span> <span class="pd">❯</span>`;
+
+let hist = [], hi = -1;
+
+/* ── helpers ── */
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function appendLine(html) {
+  const d = document.createElement('div');
+  d.className = 'line'; d.innerHTML = html; out.appendChild(d);
+}
+const scroll = () => out.scrollTop = out.scrollHeight;
+
+/* ── command definitions ── */
+const CMDS = {
+  help: () => [
+    ``,
+    `  <span class="ca">┌──────────────────────────────────────────────┐</span>`,
+    `  <span class="ca">│</span>  <span class="cw">Available Commands</span>                          <span class="ca">│</span>`,
+    `  <span class="ca">└──────────────────────────────────────────────┘</span>`,
+    ``,
+    `  <span class="cc">whoami</span>         display profile info`,
+    `  <span class="cc">skills</span>         list tech stack & skills`,
+    `  <span class="cc">projects</span>       show featured projects`,
+    `  <span class="cc">contact</span>        get social & links`,
+    `  <span class="cc">motd</span>           message of the day`,
+    `  <span class="cc">ls</span>             list files`,
+    `  <span class="cc">cat &lt;file&gt;</span>     read a file`,
+    `  <span class="cc">neofetch</span>       system info + ascii art`,
+    `  <span class="cc">matrix</span>         enter the matrix (click/key to exit)`,
+    `  <span class="cc">clear</span>          clear screen  <span class="cd">(Ctrl+L)</span>`,
+    `  <span class="cc">history</span>        show command history`,
+    `  <span class="cc">date</span>           current date`,
+    `  <span class="cc">uname</span>          kernel info`,
+    `  <span class="cc">echo &lt;text&gt;</span>    print text`,
+    ``,
+  ],
+
+  whoami: () => [
+    ``,
+    `  <span class="ca">╔══════════════════════════════════════════╗</span>`,
+    `  <span class="ca">║</span>  <span class="cw">NGO HUU LOC</span>  <span class="cd">(Nick)</span>                    <span class="ca">║</span>`,
+    `  <span class="ca">╚══════════════════════════════════════════╝</span>`,
+    ``,
+    `  <span class="cy">Role</span>      <span class="cd">─</span>  Full-Stack Engineer`,
+    `  <span class="cy">Location</span>  <span class="cd">─</span>  Vietnam 🇻🇳`,
+    `  <span class="cy">Languages</span> <span class="cd">─</span>  Vietnamese · English`,
+    `  <span class="cy">Focus</span>     <span class="cd">─</span>  Web Dev · UI/UX · Systems`,
+    `  <span class="cy">Status</span>    <span class="cd">─</span>  <span class="cg">● ONLINE</span>  Building something epic`,
+    `  <span class="cy">Motto</span>     <span class="cd">─</span>  <span class="ca">"Choose to become extraordinary"</span>`,
+    ``,
+  ],
+
+  skills: () => [
+    ``,
+    `  <span class="cw">⚙  Systems & Low-Level</span>`,
+    `  <span class="cc">C          </span> <span class="cg">███████████████░░░░░░░░░</span>  <span class="cy">75%</span>`,
+    `  <span class="cc">C++        </span> <span class="cg">███████████████░░░░░░░░░</span>  <span class="cy">75%</span>`,
+    `  <span class="cc">Python     </span> <span class="cg">████████████████░░░░░░░░</span>  <span class="cy">80%</span>`,
+    `  <span class="cc">Ruby       </span> <span class="cg">████████████░░░░░░░░░░░░</span>  <span class="cy">60%</span>`,
+    ``,
+    `  <span class="cw">🎨 Frontend</span>`,
+    `  <span class="cc">HTML/CSS   </span> <span class="ca">████████████████████████</span>  <span class="cy">95%</span>`,
+    `  <span class="cc">JavaScript </span> <span class="ca">███████████████████████░</span>  <span class="cy">92%</span>`,
+    `  <span class="cc">TypeScript </span> <span class="ca">█████████████████████░░░</span>  <span class="cy">88%</span>`,
+    `  <span class="cc">Vue.js     </span> <span class="ca">██████████████████████░░</span>  <span class="cy">90%</span>`,
+    `  <span class="cc">UI/UX      </span> <span class="ca">█████████████████░░░░░░░</span>  <span class="cy">85%</span>`,
+    ``,
+    `  <span class="cw">🗄  Backend & Infra</span>`,
+    `  <span class="cc">Supabase   </span> <span class="cy">████████████████░░░░░░░░</span>  <span class="cy">80%</span>`,
+    `  <span class="cc">PostgreSQL </span> <span class="cy">██████████████░░░░░░░░░░</span>  <span class="cy">70%</span>`,
+    `  <span class="cc">Git        </span> <span class="cy">██████████████████████░░</span>  <span class="cy">90%</span>`,
+    ``,
+  ],
+
+  projects: () => [
+    ``,
+    `  <span class="ca">▸  Featured Projects</span>`,
+    ``,
+    `  <span class="cw">01 — Portfolio Website</span>`,
+    `  <span class="cd">   Stack  :</span> Vue.js + Supabase + CSS`,
+    `  <span class="cd">   Status :</span> <span class="cg">● Live</span>`,
+    `  <span class="cd">   URL    :</span> github.com/NgoHuuLoc0612`,
+    ``,
+    `  <span class="cw">02 — Systems Experiments (C/C++)</span>`,
+    `  <span class="cd">   Stack  :</span> C · C++ · Linux`,
+    `  <span class="cd">   Status :</span> <span class="cy">● In Progress</span>`,
+    ``,
+    `  <span class="cw">03 — UI Component Library</span>`,
+    `  <span class="cd">   Stack  :</span> Vue.js + TypeScript`,
+    `  <span class="cd">   Status :</span> <span class="cy">● In Progress</span>`,
+    ``,
+    `  <span class="cd">→ github.com/NgoHuuLoc0612</span>`,
+    ``,
+  ],
+
+  contact: () => [
+    ``,
+    `  <span class="ca">▸  Connect with Nick</span>`,
+    ``,
+    `  <span class="cc">GitHub   </span> <span class="cd">→</span>  <span class="cb">github.com/NgoHuuLoc0612</span>`,
+    `  <span class="cc">Twitter  </span> <span class="cd">→</span>  <span class="cb">@benhan871986</span>`,
+    ``,
+    `  <span class="cg">Open to collaborations & cool projects!</span>`,
+    ``,
+  ],
+
+  motd: () => [
+    ``,
+    `  <span class="ca">✦  Message of the Day</span>`,
+    ``,
+    `  <span class="cw">"I think it is absolutely possible for</span>`,
+    `  <span class="cw"> an ordinary person to choose to become</span>`,
+    `  <span class="cw"> extraordinary."</span>`,
+    ``,
+    `  <span class="cd">  — Elon Musk</span>`,
+    ``,
+    `  <span class="cd">Today: ${new Date().toDateString()}</span>`,
+    ``,
+  ],
+
+  ls: () => [
+    ``,
+    `  <span class="cc">📁 projects/</span>   <span class="cc">📁 skills/</span>   <span class="cc">📁 assets/</span>`,
+    `  <span class="cg">📄 README.md</span>   <span class="cy">📄 motto.txt</span> <span class="cy">📄 bio.txt</span>`,
+    `  <span class="cg">📄 .gitconfig</span>  <span class="cr">🔒 secrets</span>`,
+    ``,
+  ],
+
+  date: () => [``, `  ${new Date().toString()}`, ``],
+
+  uname: () => [
+    ``,
+    `  <span class="cc">NickOS 25.06 x86_64</span> — GNU/Vietnam`,
+    `  Kernel: <span class="cg">passion-6.9.0-extraordinary</span>`,
+    `  Uptime: building since birth`,
+    ``,
+  ],
+
+  history: (h) => {
+    if (!h.length) return [``, `  <span class="cd">(no history yet)</span>`, ``];
+    return [``, ...h.slice(0,20).map((c,i)=>
+      `  <span class="cd">${String(i+1).padStart(3,' ')}</span>  ${esc(c)}`
+    ), ``];
+  },
+
+  neofetch: () => [
+    ``,
+    `  <span class="cc">    ⣿⣿⣿⣿⣿⣿   </span>   <span class="cw">nick</span><span class="cd">@</span><span class="cc">universe</span>`,
+    `  <span class="cc">  ⣿⣿⣿⣿⣿⣿⣿⣿ </span>   <span class="cd">─────────────────────</span>`,
+    `  <span class="cc">⣿⣿</span><span class="ca">⣿⣿⣿⣿⣿⣿</span><span class="cc">⣿⣿</span>   <span class="cy">OS</span>      NickOS 25.06 🇻🇳`,
+    `  <span class="cc">⣿⣿</span><span class="ca">⣿⣿⣿⣿⣿⣿</span><span class="cc">⣿⣿</span>   <span class="cy">Shell</span>   zsh + neovim`,
+    `  <span class="cc">  ⣿⣿⣿⣿⣿⣿⣿⣿ </span>   <span class="cy">Editor</span>  VSCode`,
+    `  <span class="cc">    ⣿⣿⣿⣿⣿⣿   </span>   <span class="cy">Stack</span>   C · C++ · Vue · TS`,
+    `                     <span class="cy">Focus</span>   UI/UX + Systems`,
+    `                     <span class="cy">Status</span>  <span class="cg">● Building</span>`,
+    ``,
+    `  <span style="color:#ff5f57">███</span><span style="color:#febc2e">███</span><span style="color:#28c840">███</span><span style="color:#00d4ff">███</span><span style="color:#c586c0">███</span><span style="color:#e5c07b">███</span>`,
+    ``,
+  ],
+
+  clear: () => { out.innerHTML = ''; return []; },
+};
+
+const CAT_FILES = {
+  'motto.txt': [
+    ``, `  <span class="ca">"Choose to become extraordinary."</span>`,
+    ``, `  <span class="cd">Author : Nick (Ngo Huu Loc)</span>`, ``,
+  ],
+  'bio.txt': [
+    ``,
+    `  Name     : Ngo Huu Loc (Nick)`,
+    `  Role     : Full-Stack Engineer`,
+    `  Location : Vietnam 🇻🇳`,
+    `  Langs    : C, C++, Python, JS, TS, Ruby`,
+    `  Loves    : Clean code, great UI, fast systems`,
+    ``,
+  ],
+  '.gitconfig': [`  <span class="cr">[error] Permission denied (read-only)</span>`, ``],
+  'README.md':  [`  <span class="cd">→ See github.com/NgoHuuLoc0612 for the full version.</span>`, ``],
+  'secrets':    [`  <span class="cr">🔒 Access denied. Nice try, hacker.</span>`, ``],
+};
+
+/* ── MATRIX ── */
+const canvas = document.getElementById('matrix-canvas');
+const matExit = document.getElementById('matrix-exit');
+const ctx = canvas.getContext('2d');
+let matRaf = null;
+let drops = [];
+
+function startMatrix() {
+  canvas.classList.add('active');
+  matExit.classList.add('active');
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const cols = Math.floor(canvas.width / 16);
+  drops = Array(cols).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = '#00d4ff';
+    ctx.font = '15px monospace';
+    const chars = 'アイウエオカキクケコ0123456789ABCDEF@#$%';
+    drops.forEach((y,i)=>{
+      const ch = chars[Math.floor(Math.random()*chars.length)];
+      ctx.fillStyle = Math.random()>.9 ? '#ffffff' : '#00d4ff';
+      ctx.fillText(ch, i*16, y*16);
+      if(y*16>canvas.height && Math.random()>.975) drops[i]=0;
+      drops[i]++;
+    });
+    matRaf = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+function stopMatrix() {
+  cancelAnimationFrame(matRaf);
+  canvas.classList.remove('active');
+  matExit.classList.remove('active');
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  appendLine(`  <span class="cg">Exiting matrix... welcome back.</span>`);
+  appendLine('');
+  scroll();
+}
+
+canvas.addEventListener('click', stopMatrix);
+matExit.addEventListener('click', stopMatrix);
+document.addEventListener('keydown', e => {
+  if (canvas.classList.contains('active')) { stopMatrix(); }
+});
+
+/* ── HINTS ── */
+const HINT_CMDS = ['help','whoami','skills','projects','contact','neofetch','matrix','ls','clear'];
+HINT_CMDS.forEach(c => {
+  const b = document.createElement('button');
+  b.className = 'hbtn'; b.textContent = c;
+  b.onclick = () => run(c);
+  hints.appendChild(b);
+});
+
+/* ── RUNNER ── */
+function run(raw) {
+  const cmd = raw.trim();
+  if (!cmd) return;
+  hist.unshift(cmd); hi = -1;
+
+  appendLine(`${PROMPT} <span style="color:var(--text)">${esc(cmd)}</span>`);
+
+  const parts = cmd.split(/\s+/);
+  const verb  = parts[0].toLowerCase();
+  const arg   = parts.slice(1).join(' ');
+
+  if (verb === 'cat') {
+    const f = arg.trim();
+    const lines = CAT_FILES[f];
+    if (lines) lines.forEach(l => appendLine(l));
+    else appendLine(`  <span class="cr">cat: ${esc(f||'')}: No such file or directory</span>`);
+  } else if (verb === 'echo') {
+    appendLine(`  ${esc(arg)}`);
+  } else if (verb === 'matrix') {
+    appendLine(`  <span class="cg">Entering the Matrix… click or press any key to exit.</span>`);
+    appendLine(''); scroll();
+    setTimeout(startMatrix, 600);
+    return;
+  } else if (verb === 'history') {
+    CMDS.history(hist).forEach(l => appendLine(l));
+  } else if (CMDS[verb]) {
+    const lines = CMDS[verb]();
+    if (lines) lines.forEach(l => appendLine(l));
+  } else {
+    appendLine(`  <span class="cr">zsh: command not found: ${esc(verb)}</span>`);
+    appendLine(`  <span class="cd">Type <span class="cc">help</span> for available commands.</span>`);
+  }
+
+  appendLine(''); scroll(); inp.value = '';
+}
+
+/* ── INPUT ── */
+inp.addEventListener('keydown', e => {
+  if (e.key === 'Enter') { run(inp.value); }
+  else if (e.key === 'ArrowUp')   { e.preventDefault(); if (hi < hist.length-1) { hi++; inp.value = hist[hi]; } }
+  else if (e.key === 'ArrowDown') { e.preventDefault(); if (hi > 0) { hi--; inp.value = hist[hi]; } else { hi=-1; inp.value=''; } }
+  else if (e.key === 'Tab')       { e.preventDefault(); const v=inp.value.trim(); const m=Object.keys(CMDS).find(c=>c.startsWith(v)&&c!==v); if(m) inp.value=m; }
+  else if (e.key==='l' && e.ctrlKey) { e.preventDefault(); out.innerHTML=''; }
+});
+
+/* ── BOOT ── */
+[
+  `<span class="cd">Last login: ${new Date().toUTCString()}</span>`,
+  `<span class="cg">Welcome to nick@universe</span> <span class="cd">— Type </span><span class="cc">help</span><span class="cd"> to get started</span>`,
+  ``,
+].forEach(l => appendLine(l));
+inp.focus();
+</script>
+</body>
+</html>
