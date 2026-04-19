@@ -1,16 +1,9 @@
 # .github/workflows/3d-contrib.yml
-# Generates a stunning 3D isometric contribution calendar
-# Output: output branch → profile-3d-contrib/profile-night-rainbow.svg
-#
-# ─── SECRETS REQUIRED ────────────────────────────────────────
-#  GITHUB_TOKEN  →  provided automatically by GitHub Actions
-# ──────────────────────────────────────────────────────────────
-
 name: 🌐 Generate 3D Contribution Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"    # runs daily at midnight UTC
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -26,7 +19,7 @@ jobs:
       - name: 📥 Checkout main branch
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # full history needed for contribution graph
+          fetch-depth: 0
 
       - name: 🌐 Generate 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
@@ -34,15 +27,24 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: 🔧 Rename to profile-night-rainbow.svg
+      - name: 🔍 List generated SVG files
+        run: find . -name "*.svg" | sort
+
+      - name: 🔧 Rename generated SVG to profile-night-rainbow.svg
         run: |
-          mv profile-3d-contrib/profile-customize.svg profile-3d-contrib/profile-night-rainbow.svg
+          GENERATED=$(find . -path "*/profile-3d-contrib/*.svg" | head -1)
+          if [ -z "$GENERATED" ]; then
+            echo "❌ No SVG found in profile-3d-contrib/"
+            exit 1
+          fi
+          echo "✅ Found: $GENERATED"
+          mv "$GENERATED" profile-3d-contrib/profile-night-rainbow.svg
 
       - name: 🚀 Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: profile-3d-contrib
-          keep_history: true   
+          keep_history: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
