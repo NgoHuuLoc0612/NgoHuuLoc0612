@@ -69,27 +69,6 @@
 
 </div>
 
----
-
-<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-     SECTION 2 — GITHUB STATS
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
-
-<div align="center">
-
-### 📊 GitHub Universe
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=NgoHuuLoc0612&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0d0221&title_color=00d4ff&icon_color=00d4ff&text_color=a8edff&border_radius=20&ring_color=00d4ff" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=NgoHuuLoc0612&theme=tokyonight&hide_border=true&background=0d0221&ring=00d4ff&fire=ff6b6b&currStreakLabel=00d4ff&sideLabels=a8edff&dates=a8edff&border_radius=20" />
-
-<br><br>
-
-<img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NgoHuuLoc0612&layout=donut&theme=tokyonight&hide_border=true&bg_color=0d0221&title_color=00d4ff&text_color=a8edff&border_radius=20&langs_count=8" />
-
-</div>
-
----
-
 <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
      SECTION 3 — 3D CONTRIBUTION GRAPH
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
