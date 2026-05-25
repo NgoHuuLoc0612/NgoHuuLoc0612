@@ -8,7 +8,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0221,25:0a3d62,50:1a1a2e,75:16213e,100:0f3460&height=280&section=header&text=NGO%20HUU%20LOC&fontSize=90&fontColor=00d4ff&fontAlignY=40&desc=Crafting%20the%20Future%2C%20One%20Line%20at%20a%20Time&descSize=22&descAlignY=65&descColor=a8edff&animation=fadeIn&stroke=00d4ff&strokeWidth=2" />
 
 <!-- ░░░ TYPING SVG ░░░ -->
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Building+extraordinary+things;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Astro+%7C+Remix+%7C+Tailwind+CSS;🤖+AI+Tools+Explorer+%7C+Claude+%26+More;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
 
 <br>
 
@@ -118,7 +118,8 @@
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![WSL2](https://img.shields.io/badge/WSL2-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
 <br>
 
@@ -128,7 +129,10 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+![Remix](https://img.shields.io/badge/Remix-000000?style=for-the-badge&logo=remix&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 <br>
 
@@ -138,7 +142,17 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+<br>
+
+**🤖 AI Tools & Models**
+
+![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-74AA9C?style=for-the-badge&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Grok](https://img.shields.io/badge/Grok-000000?style=for-the-badge&logo=x&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white)
+![DeepSeek](https://img.shields.io/badge/DeepSeek-0066FF?style=for-the-badge&logo=deepseek&logoColor=white)
 
 <br>
 
@@ -152,7 +166,10 @@
 ║  UI/UX Design        ■ 85%   ████████████████░░░░░   ⚡     ║
 ║  C / C++             ■ 75%   ██████████████░░░░░░░   🛡️     ║
 ║  Python              ■ 80%   ████████████████░░░░░   🐍     ║
-║  Systems Design      ■ 70%   █████████████░░░░░░░░   🏗️     ║
+║  Astro / Remix       ■ 80%   ████████████████░░░░░   🚀     ║
+║  Tailwind / Bootstrap■ 90%   ██████████████████░░░   🎨     ║
+║  PHP                 ■ 70%   █████████████░░░░░░░░   🐘     ║
+║  AI Integration      ■ 85%   ████████████████░░░░░   🤖     ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
@@ -193,13 +210,19 @@ mindmap
       C++ OOP
         Templates
         STL and Algorithms
+      PHP
+        REST APIs
+        Server-Side Logic
     🎨 Frontend
-      Vue.js Mastery
-        Composables
-        Pinia State
-      CSS Wizardry
-        Animations
-        Grid and Flex
+      Astro & Remix
+        SSR and SSG
+        File-Based Routing
+      Tailwind CSS
+        Utility-First
+        Design Tokens
+      Bootstrap
+        Components
+        Responsive Grid
       UI/UX Design
         Figma
         Design Systems
@@ -210,10 +233,20 @@ mindmap
       Supabase
         Realtime DB
         Auth and Storage
+    🤖 AI Tools
+      Language Models
+        Claude
+        ChatGPT
+        Gemini
+      Fast Inference
+        Groq
+        DeepSeek
+      X AI
+        Grok
     ☁️ Cloud
       CI/CD Pipelines
       Performance
-      Serverless
+      WSL2 Dev Environment
 ```
 
 </div>
