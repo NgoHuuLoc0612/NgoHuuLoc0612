@@ -202,50 +202,42 @@
 ```mermaid
 %%{init: {"theme": "dark", "themeVariables": {"primaryColor": "#0a3d62", "primaryTextColor": "#00d4ff", "primaryBorderColor": "#00d4ff", "lineColor": "#00d4ff", "secondaryColor": "#1a1a2e", "tertiaryColor": "#16213e"}}}%%
 mindmap
-  root((🚀 Nick))
+  root((🚀 Full-stack / AI Developer))
     ⚡ Systems
-      C Language
-        Memory Management
-        Pointers and Structs
-      C++ OOP
-        Templates
-        STL and Algorithms
-      PHP
+      C / C++
+        Memory & Pointers
+        STL & Templates
+      PHP Backend
         REST APIs
-        Server-Side Logic
+        Server Architecture
+
     🎨 Frontend
-      Astro & Remix
-        SSR and SSG
-        File-Based Routing
+      Astro / Remix
+        SSR / SSG
+        Routing Systems
       Tailwind CSS
-        Utility-First
-        Design Tokens
-      Bootstrap
-        Components
-        Responsive Grid
-      UI/UX Design
-        Figma
         Design Systems
+        UI Consistency
+      UI/UX
+        Figma
+        Component Design
+
     🗄️ Backend
       API Design
-        REST
-        GraphQL
+        REST / GraphQL
       Supabase
-        Realtime DB
-        Auth and Storage
-    🤖 AI Tools
-      Language Models
-        Claude
-        ChatGPT
-        Gemini
-      Fast Inference
-        Groq
-        DeepSeek
-      X AI
-        Grok
-    ☁️ Cloud
-      CI/CD Pipelines
-      Performance
+        Auth / Realtime / Storage
+
+    🤖 AI Engineering
+      LLM Integration
+        ChatGPT / Claude / Gemini
+      Inference Systems
+        Groq / DeepSeek
+      Prompt / Workflow Design
+
+    ☁️ Infrastructure
+      CI/CD
+      Performance Optimization
       WSL2 Dev Environment
 ```
 
