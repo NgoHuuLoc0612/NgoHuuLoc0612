@@ -8,7 +8,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0221,25:0a3d62,50:1a1a2e,75:16213e,100:0f3460&height=280&section=header&text=NGO%20HUU%20LOC&fontSize=90&fontColor=00d4ff&fontAlignY=40&desc=Crafting%20the%20Future%2C%20One%20Line%20at%20a%20Time&descSize=22&descAlignY=65&descColor=a8edff&animation=fadeIn&stroke=00d4ff&strokeWidth=2" />
 
 <!-- ░░░ TYPING SVG ░░░ -->
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Astro+%7C+Remix+%7C+Tailwind+CSS;🤖+AI+Tools+Explorer+%7C+Claude+%26+More;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&multiline=false&width=700&height=60&lines=⚡+Full-Stack+Engineer+%7C+Nick;🎨+UI%2FUX+Craftsman+%26+Designer;🔧+Systems+Architect+%7C+C%2B%2B+%26+C;🚀+Next.js+%7C+Nuxt+%7C+Vue+%7C+Astro;🗄️+FastAPI+%7C+MongoDB+%7C+Redis+%7C+Firebase;🤖+AI+Tools+Explorer+%7C+Claude+%26+More;💡+Choose+to+become+extraordinary" alt="Typing SVG" />
 
 <br>
 
@@ -131,7 +131,11 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
 ![Remix](https://img.shields.io/badge/Remix-000000?style=for-the-badge&logo=remix&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=for-the-badge&logo=nuxtdotjs&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 <br>
@@ -139,7 +143,13 @@
 **🗄️ Backend & Infrastructure**
 
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white)
+![Laragon](https://img.shields.io/badge/Laragon-0E83CD?style=for-the-badge&logo=laragon&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
@@ -167,8 +177,13 @@
 ║  C / C++             ■ 75%   ██████████████░░░░░░░   🛡️     ║
 ║  Python              ■ 80%   ████████████████░░░░░   🐍     ║
 ║  Astro / Remix       ■ 80%   ████████████████░░░░░   🚀     ║
-║  Tailwind / Bootstrap■ 90%   ██████████████████░░░   🎨     ║
-║  PHP                 ■ 70%   █████████████░░░░░░░░   🐘     ║
+║  Next.js / Nuxt      ■ 82%   ████████████████░░░░░   ⚡     ║
+║  Vue.js              ■ 80%   ████████████████░░░░░   💚     ║
+║  Tailwind / SCSS     ■ 90%   ██████████████████░░░   🎨     ║
+║  FastAPI             ■ 78%   ███████████████░░░░░░   🚀     ║
+║  MongoDB / Redis     ■ 75%   ██████████████░░░░░░░   🗄️     ║
+║  Firebase            ■ 78%   ███████████████░░░░░░   🔥     ║
+║  PHP / Laragon       ■ 70%   █████████████░░░░░░░░   🐘     ║
 ║  AI Integration      ■ 85%   ████████████████░░░░░   🤖     ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
@@ -214,19 +229,33 @@ mindmap
     🎨 Frontend
       Astro / Remix
         SSR / SSG
-        Routing Systems
-      Tailwind CSS
+      Next.js / Nuxt
+        SSR / ISR
+        File-based Routing
+      Vue.js
+        Composition API
+        Pinia State
+      Tailwind / SCSS
         Design Systems
         UI Consistency
       UI/UX
         Figma
         Component Design
 
-    🗄️ Backend
-      API Design
-        REST / GraphQL
-      Supabase
-        Auth / Realtime / Storage
+    🗄️ Backend & Data
+      FastAPI
+        Async REST APIs
+        Pydantic Models
+      Supabase / Firebase
+        Auth / Realtime
+      PostgreSQL / SQLite
+        Relational Data
+      MongoDB
+        Document Store
+      Redis
+        Caching / Queues
+      Laragon
+        Local Dev Stack
 
     🤖 AI Engineering
       LLM Integration
@@ -283,6 +312,6 @@ mindmap
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:1a1a2e,100:0d0221&height=120&section=footer&animation=twinkling" />
 
-<sub>⚡ Powered by passion, caffeine & extraordinary ambition · Auto-updated: 2026-04-20 03:57:19 UTC</sub>
+<sub>⚡ Powered by passion, caffeine & extraordinary ambition · Auto-updated: 2026-05-31 00:00:00 UTC</sub>
 
 </div>
