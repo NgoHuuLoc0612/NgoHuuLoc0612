@@ -15,7 +15,7 @@
 <!-- ░░░ SOCIAL BADGES ░░░ -->
 [![Profile Views](https://komarev.com/ghpvc/?username=NgoHuuLoc0612&color=00d4ff&style=for-the-badge&label=VISITORS)](https://github.com/NgoHuuLoc0612)
 [![GitHub followers](https://img.shields.io/github/followers/NgoHuuLoc0612?style=for-the-badge&logo=github&color=0d0221&labelColor=00d4ff&logoColor=0d0221)](https://github.com/NgoHuuLoc0612)
-[![Twitter Follow](https://img.shields.io/twitter/follow/benhan871986?color=00d4ff&logo=twitter&style=for-the-badge&labelColor=0d0221)](https://twitter.com/benhan871986)
+[![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
 
 </div>
 
@@ -341,7 +341,7 @@ mindmap
 ### 🌐 Connect
 
 [![GitHub](https://img.shields.io/badge/GitHub-0d0221?style=for-the-badge&logo=github&logoColor=00d4ff)](https://github.com/NgoHuuLoc0612)
-[![Twitter](https://img.shields.io/badge/Twitter-0d0221?style=for-the-badge&logo=twitter&logoColor=00d4ff)](https://twitter.com/benhan871986)
+[![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
 [![Terminal](https://img.shields.io/badge/Terminal-0d0221?style=for-the-badge&logo=gnubash&logoColor=00d4ff)](https://nick-terminal.vercel.app)
 
 ---
