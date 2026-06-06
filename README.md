@@ -141,6 +141,9 @@
 ![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![UnoCSS](https://img.shields.io/badge/UnoCSS-333333?style=for-the-badge&logo=unocss&logoColor=white)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-111111?style=for-the-badge&logo=webassembly&logoColor=654FF0)
+![Electron](https://img.shields.io/badge/Electron-111111?style=for-the-badge&logo=electron&logoColor=9FEAF9)
+![Pinia](https://img.shields.io/badge/Pinia-111111?style=for-the-badge&logo=pinia&logoColor=FFD859)
 
 <br>
 
@@ -154,6 +157,8 @@
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![LLVM](https://img.shields.io/badge/LLVM-262D3A?style=for-the-badge&logo=llvm&logoColor=white)
 ![Clang](https://img.shields.io/badge/Clang-262D3A?style=for-the-badge&logo=clang&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-111111?style=for-the-badge&logo=netlify&logoColor=00C7B7)
+![Vercel](https://img.shields.io/badge/Vercel-111111?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
@@ -189,7 +194,10 @@
 ![Redis](https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white)
 ![Laragon](https://img.shields.io/badge/Laragon-0E83CD?style=for-the-badge&logo=laragon&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Memurai](https://img.shields.io/badge/Memurai-EF3E42?style=for-the-badge)
+![Nginx](https://img.shields.io/badge/Nginx-111111?style=for-the-badge&logo=nginx&logoColor=009639)
+![Sublime Text](https://img.shields.io/badge/Sublime_Text-111111?style=for-the-badge&logo=sublimetext&logoColor=FF9800)
+![Appwrite](https://img.shields.io/badge/Appwrite-111111?style=for-the-badge&logo=appwrite&logoColor=FD366E)
+![Anaconda](https://img.shields.io/badge/Anaconda-111111?style=for-the-badge&logo=anaconda&logoColor=44A833)
 
 <br>
 
@@ -201,6 +209,11 @@
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 
 <br>
+
+**🪟 Operating system currently in use**
+
+[![Windows](https://skillicons.dev/icons?i=windows,ubuntu&theme=dark)](https://skillicons.dev)
+
 
 **📊 Skill Proficiency**
 
