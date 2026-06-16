@@ -41,29 +41,6 @@
   <img src="https://nick-terminal.vercel.app/og-preview.png" width="100%" alt="Interactive Terminal — click to open" onerror="this.style.display='none'" />
 </a>
 
-<!-- Fallback ASCII preview (always visible on GitHub) -->
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│  nick@universe — zsh                                  ● ● ●        │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  nick@universe ❯ whoami                                             │
-│                                                                     │
-│  ╔══════════════════════════════════════════╗                       │
-│  ║  NGO HUU LOC  (Nick)                    ║                       │
-│  ╚══════════════════════════════════════════╝                       │
-│                                                                     │
-│  Role      ─  Full-Stack Engineer                                   │
-│  Location  ─  Vietnam 🇻🇳                                          │
-│  Status    ─  ● ONLINE  Building something epic                     │
-│  Motto     ─  "Choose to become extraordinary"                      │
-│                                                                     │
-│  nick@universe ❯ █                                                  │
-│                                                                     │
-│  [ help ] [ whoami ] [ skills ] [ projects ] [ matrix ] [ clear ]  │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
 > 🚀 **[Click here to open the live interactive terminal →](https://nick-terminal.vercel.app)**
 > Type `help` • `whoami` • `skills` • `projects` • `matrix` and more!
 
@@ -217,29 +194,6 @@
 **🪟 Operating system currently in use**
 
 [![Windows](https://skillicons.dev/icons?i=windows,ubuntu&theme=dark)](https://skillicons.dev)
-
-
-**📊 Skill Proficiency**
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║  Skill               Level    Progress                       ║
-╠══════════════════════════════════════════════════════════════╣
-║  Frontend Dev        ■ 95%   ████████████████████░   🔥     ║
-║  UI/UX Design        ■ 85%   ████████████████░░░░░   ⚡     ║
-║  C / C++             ■ 75%   ██████████████░░░░░░░   🛡️     ║
-║  Python              ■ 80%   ████████████████░░░░░   🐍     ║
-║  Astro / Remix       ■ 80%   ████████████████░░░░░   🚀     ║
-║  Next.js / Nuxt      ■ 82%   ████████████████░░░░░   ⚡     ║
-║  Vue.js              ■ 80%   ████████████████░░░░░   💚     ║
-║  Tailwind / SCSS     ■ 90%   ██████████████████░░░   🎨     ║
-║  FastAPI             ■ 78%   ███████████████░░░░░░   🚀     ║
-║  MongoDB / Redis     ■ 75%   ██████████████░░░░░░░   🗄️     ║
-║  Firebase            ■ 78%   ███████████████░░░░░░   🔥     ║
-║  PHP / Laragon       ■ 70%   █████████████░░░░░░░░   🐘     ║
-║  AI Integration      ■ 85%   ████████████████░░░░░   🤖     ║
-╚══════════════════════════════════════════════════════════════╝
-```
 
 </div>
 
