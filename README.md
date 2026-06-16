@@ -14,7 +14,6 @@
 
 <!-- ░░░ SOCIAL BADGES ░░░ -->
 [![Profile Views](https://komarev.com/ghpvc/?username=NgoHuuLoc0612&color=00d4ff&style=for-the-badge&label=VISITORS)](https://github.com/NgoHuuLoc0612)
-[![GitHub followers](https://img.shields.io/github/followers/NgoHuuLoc0612?style=for-the-badge&logo=github&color=0d0221&labelColor=00d4ff&logoColor=0d0221)](https://github.com/NgoHuuLoc0612)
 [![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
 
 </div>
