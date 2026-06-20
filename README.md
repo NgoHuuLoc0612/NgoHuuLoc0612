@@ -124,6 +124,7 @@
 ![WebAssembly](https://img.shields.io/badge/WebAssembly-111111?style=for-the-badge&logo=webassembly&logoColor=654FF0)
 ![Electron](https://img.shields.io/badge/Electron-111111?style=for-the-badge&logo=electron&logoColor=9FEAF9)
 ![Pinia](https://img.shields.io/badge/Pinia-111111?style=for-the-badge&logo=pinia&logoColor=FFD859)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 
 <br>
 
@@ -162,6 +163,7 @@
 **🗄️ Backend & Infrastructure**
 
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![BullMQ](https://img.shields.io/badge/BullMQ-1F2937?style=for-the-badge&logo=redis&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
 ![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
