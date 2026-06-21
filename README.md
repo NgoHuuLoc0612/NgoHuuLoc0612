@@ -12,6 +12,8 @@
 
 <br>
 
+![](header.png)
+
 <!-- ░░░ SOCIAL BADGES ░░░ -->
 [![Profile Views](https://komarev.com/ghpvc/?username=NgoHuuLoc0612&color=00d4ff&style=for-the-badge&label=VISITORS)](https://github.com/NgoHuuLoc0612)
 [![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
@@ -64,8 +66,6 @@
 <img src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
 
 </div>
-
-![](header.png)
 
 ---
 
