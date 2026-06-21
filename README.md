@@ -217,6 +217,18 @@
 
 ---
 
+<div align="center">
+
+## Counting Visitors
+
+<br/>
+
+<a href="https://tools.anonyviet.com/flag-counter/details/ih/">
+  <img src="https://tools.anonyviet.com/flag-counter/load/ih/" alt="Visitor Counter" />
+</a>
+
+<br/>
+
 <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
      SECTION 7 — MIND MAP
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
@@ -322,6 +334,8 @@ mindmap
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:1a1a2e,100:0d0221&height=120&section=footer&animation=twinkling" />
 
-<sub>⚡ Powered by passion, caffeine & extraordinary ambition · Auto-updated: 2026-05-31 00:00:00 UTC</sub>
+<p align="center">
+  <sub>⚡ Powered by passion, caffeine & extraordinary ambition</sub>
+</p>
 
 </div>
