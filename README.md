@@ -283,16 +283,6 @@ mindmap
 
 </div>
 
----
-
-<div align="center">
-
-Counting of visitors to this page
-
-<a href="https://info.flagcounter.com/YIG6"><img src="https://s05.flagcounter.com/map/YIG6/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter" border="0"></a>
-
-</div>
-
 
 <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
      SECTION 8 — LIVE METRICS
