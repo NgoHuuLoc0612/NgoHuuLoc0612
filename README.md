@@ -128,6 +128,7 @@
 ![Electron](https://img.shields.io/badge/Electron-111111?style=for-the-badge&logo=electron&logoColor=9FEAF9)
 ![Pinia](https://img.shields.io/badge/Pinia-111111?style=for-the-badge&logo=pinia&logoColor=FFD859)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
 
 <br>
 
@@ -183,6 +184,11 @@
 ![Sublime Text](https://img.shields.io/badge/Sublime_Text-111111?style=for-the-badge&logo=sublimetext&logoColor=FF9800)
 ![Appwrite](https://img.shields.io/badge/Appwrite-111111?style=for-the-badge&logo=appwrite&logoColor=FD366E)
 ![Anaconda](https://img.shields.io/badge/Anaconda-111111?style=for-the-badge&logo=anaconda&logoColor=44A833)
+![TradingView](https://img.shields.io/badge/TradingView-Lightweight%20Charts-131722)
+![IndexedDB](https://img.shields.io/badge/IndexedDB-Offline%20Cache-007ACC)
+![Finnhub](https://img.shields.io/badge/Finnhub-Market%20Data-00C853)
+![Binance](https://img.shields.io/badge/Binance-WebSocket-F3BA2F?logo=binance&logoColor=black)
+![RxJS](https://img.shields.io/badge/RxJS-7-B7178C?logo=reactivex&logoColor=white)
 
 <br>
 
