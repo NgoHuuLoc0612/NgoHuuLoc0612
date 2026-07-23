@@ -15,7 +15,7 @@
 ![](header.png)
 
 <!-- ░░░ SOCIAL BADGES ░░░ -->
-[![Profile Views](https://komarev.com/ghpvc/?username=NgoHuuLoc0612&color=00d4ff&style=for-the-badge&label=VISITORS)](https://github.com/NgoHuuLoc0612)
+[![Profile Views](https://komarev.com/ghpvc/?username=d4vucat&color=00d4ff&style=for-the-badge&label=VISITORS)](https://github.com/d4vucat)
 [![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
 
 </div>
@@ -56,14 +56,14 @@
 ### 🌐 3D Contribution Landscape
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/github-snake.svg" />
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/github-snake-dark.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/d4vucat/d4vucat/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/d4vucat/d4vucat/output/github-snake.svg" />
+  <img alt="github contribution snake" src="https://raw.githubusercontent.com/d4vucat/d4vucat/output/github-snake-dark.svg" width="100%" />
 </picture>
 
 <br>
 
-<img src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/output/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
+<img src="https://raw.githubusercontent.com/d4vucat/d4vucat/output/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
 
 </div>
 
@@ -77,7 +77,7 @@
 
 ### 🏆 Trophy Wall
 
-<img src="https://github-trophies.vercel.app/?username=NgoHuuLoc0612&theme=algolia&no-frame=true&no-bg=true&row=2&column=4&margin-w=10&margin-h=10" width="100%" alt="Trophies" />
+<img src="https://github-trophies.vercel.app/?username=d4vucat&theme=algolia&no-frame=true&no-bg=true&row=2&column=4&margin-w=10&margin-h=10" width="100%" alt="Trophies" />
 
 </div>
 
@@ -217,7 +217,7 @@
 
 ### 📈 Activity Graph
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=NgoHuuLoc0612&custom_title=Nick's%20Contribution%20Timeline&bg_color=0d0221&color=00d4ff&line=00d4ff&point=ff6b6b&area_color=00d4ff&area=true&hide_border=true&radius=16" width="100%" alt="Activity Graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=d4vucat&custom_title=Nick's%20Contribution%20Timeline&bg_color=0d0221&color=00d4ff&line=00d4ff&point=ff6b6b&area_color=00d4ff&area=true&hide_border=true&radius=16" width="100%" alt="Activity Graph" />
 
 </div>
 
@@ -310,7 +310,7 @@ mindmap
 
 ### ⚡ Live Metrics
 
-<img src="https://raw.githubusercontent.com/NgoHuuLoc0612/NgoHuuLoc0612/main/metrics.svg" alt="GitHub Metrics" width="100%" />
+<img src="https://raw.githubusercontent.com/d4vucat/d4vucat/main/metrics.svg" alt="GitHub Metrics" width="100%" />
 
 </div>
 
@@ -332,7 +332,7 @@ mindmap
 
 ### 🌐 Connect
 
-[![GitHub](https://img.shields.io/badge/GitHub-0d0221?style=for-the-badge&logo=github&logoColor=00d4ff)](https://github.com/NgoHuuLoc0612)
+[![GitHub](https://img.shields.io/badge/GitHub-0d0221?style=for-the-badge&logo=github&logoColor=00d4ff)](https://github.com/d4vucat)
 [![Reddit Profile](https://img.shields.io/badge/Follow%20on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/Kooky-Elevator1766/)
 [![Terminal](https://img.shields.io/badge/Terminal-0d0221?style=for-the-badge&logo=gnubash&logoColor=00d4ff)](https://nick-terminal.vercel.app)
 
