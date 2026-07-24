@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # ── Core settings ──────────────────────────
-          user: NgoHuuLoc0612
+          user: d4vucat
           template: classic
           base: header, activity, community, repositories, metadata
           filename: metrics.svg
